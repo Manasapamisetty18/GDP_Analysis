@@ -1,0 +1,16 @@
+COUNTRY_ID,COUNTRY_NAME,ISO3,CONTINENT,SUB_REGION,LOCAL_CURRENCY,MARKET_TYPE,INCOME_GROUP,MEMBER_SINCE,UPDATED_AT
+CT001,India,IND,Asia,South Asia,INR,Emerging,Lower-Middle,2010-01-01,2026-01-01 08:00:00
+CT002,United States,USA,North America,Northern America,USD,Developed,High,2010-01-01,2026-01-01 08:01:00
+CT003,China,CHN,Asia,East Asia,CNY,Emerging,Upper-Middle,2010-01-01 08:02:00,2026-01-01 08:02:00
+CT004,Japan,JPN,Asia,East Asia,JPY,Developed,High,2010-01-01,2026-01-01 08:03:00
+CT005,Germany,DEU,Europe,Western Europe,EUR,Developed,High,2010-01-01,2026-01-01 08:04:00
+CT006,United Kingdom,GBR,Europe,Northern Europe,GBP,Developed,High,2010-01-01,2026-01-01 08:05:00
+CT007,France,FRA,Europe,Western Europe,EUR,Developed,High,2010-01-01,2026-01-01 08:06:00
+CT008,Brazil,BRA,South America,Latin America,BRL,Emerging,Upper-Middle,2010-01-01,2026-01-01 08:07:00
+CT009,Canada,CAN,North America,Northern America,CAD,Developed,High,2010-01-01,2026-01-01 08:08:00
+CT010,Australia,AUS,Oceania,Australia & NZ,AUD,Developed,High,2010-01-01,2026-01-01 08:09:00
+CT011,South Korea,KOR,Asia,East Asia,KRW,Developed,High,2012-01-01,2026-01-01 08:10:00
+CT012,Indonesia,IDN,Asia,South East Asia,IDR,Emerging,Lower-Middle,2012-01-01,2026-01-01 08:11:00
+CT013,Mexico,MEX,North America,Latin America,MXN,Emerging,Upper-Middle,2012-01-01,2026-01-01 08:12:00
+CT014,Saudi Arabia,SAU,Asia,Middle East,SAR,Emerging,High,2013-01-01,2026-01-01 08:13:00
+CT015,South Africa,ZAF,Africa,Southern Africa,ZAR,Emerging,Upper-Middle,2013-01-01,2026-01-01 08:14:00

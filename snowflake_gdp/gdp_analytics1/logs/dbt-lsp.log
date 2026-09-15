@@ -1,0 +1,1539 @@
+==================== 2026-09-08T09:02:30.913088Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-09-08T09:02:30.915919Z | 64fae475-4f41-4414-80e9-414366e323df ====================
+09:02:30.916061 [info ]: Starting dbt LSP server
+09:02:30.916395 [info ]: Connecting to LSP client on port 8000
+09:02:30.919000 [info ]: Successfully connected to LSP client
+09:02:30.919044 [info ]: Creating LSP service...
+09:02:30.927640 [info ]: Creating LSP server...
+09:02:30.927689 [info ]: Starting LSP server...
+09:02:31.072724 [info ]: Loading ~/.dbt/profiles.yml
+09:02:31.131517 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+==================== 2026-09-08T09:03:22.896188Z | 79dcec72-1209-4e4f-a795-db424dec2ce4 ====================
+09:03:22.899147 [info ]: Started loading project
+09:03:22.906219 [info ]: Loading ~/.dbt/profiles.yml
+09:03:22.934257 [debug]:    Started loading packages
+09:03:22.937324 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:03:22.946919 [debug]:     Loaded [  0.01s] packages
+09:03:22.953761 [info ]: Finished loading project [  0.05s]
+09:03:22.958448 [info ]: Started parsing
+09:03:23.042782 [debug]: Finished parsing models/schema.yml [  0.02s]
+09:03:23.084858 [debug]: Finished parsing snapshots\country_snapshot.sql [  0.03s]
+09:03:23.108232 [debug]: Finished parsing models/marts/dim_country.sql [  0.01s]
+09:03:23.109368 [debug]: Finished parsing models/marts/dim_date.sql [  0.00s]
+09:03:23.110308 [debug]: Finished parsing models/marts/dim_indicator.sql [  0.00s]
+09:03:23.111942 [debug]: Finished parsing models/marts/fact_econ_observation.sql [  0.00s]
+09:03:23.113014 [debug]: Finished parsing models/staging/stg_countries.sql [  0.00s]
+09:03:23.113745 [debug]: Finished parsing models/staging/stg_indicators.sql [  0.00s]
+09:03:23.114702 [debug]: Finished parsing models/staging/stg_observations.sql [  0.00s]
+09:03:23.292595 [info ]: Finished parsing [  0.33s]
+09:03:23.296482 [info ]: Cached model count updated: 7 models (estimate)
+09:03:23.296536 [info ]: Cached model count updated: 7 models (accurate)
+09:03:23.299000 [info ]: Started scheduling
+09:03:23.305428 [info ]: Finished scheduling [  0.01s]
+09:03:23.306285 [debug]: Compilation - 2 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.stg_countries"}
+09:03:23.307380 [info ]: Started scheduling
+09:03:23.308123 [info ]: Finished scheduling [  0.00s]
+09:03:23.330121 [info ]: Started building task graph
+09:03:23.334397 [info ]: Finished building task graph [  0.00s]
+09:03:23.387972 [info ]: Started rendering (2 nodes)
+09:03:23.388863 [info ]: Started model DW.dim_country
+09:03:23.389123 [debug]: Started rendering model DW.dim_country
+09:03:23.390158 [info ]: Started model DW.stg_countries
+09:03:23.390266 [debug]: Started rendering model DW.stg_countries
+09:03:23.412165 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:03:23.412165 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:03:23.415225 [debug]: Finished rendering [  0.02s] model DW.stg_countries [success]
+09:03:23.416362 [info ]: Started analyzing (2 nodes)
+09:03:23.416436 [debug]: Started analyzing model DW.stg_countries
+09:03:23.416583 [debug]: Finished rendering [  0.03s] model DW.dim_country [success]
+09:03:23.416652 [info ]: Finished rendering [  0.03s] (2 nodes, 0 skipped, 0 errors)
+09:03:23.416694 [debug]: Started analyzing model DW.dim_country
+09:03:23.451927 [debug]: Finished analyzing [  0.04s] model DW.stg_countries [success]
+09:03:23.451974 [info ]:  Succeeded [  0.06s] model DW.stg_countries (view)
+09:03:23.452017 [debug]: Finished analyzing [  0.04s] model DW.dim_country [success]
+09:03:23.452031 [info ]: Finished analyzing [  0.04s] (2 nodes, 0 skipped, 0 errors)
+09:03:23.452040 [info ]:  Succeeded [  0.06s] model DW.dim_country (view)
+09:03:23.463628 [info ]: Started scheduling
+09:03:23.463706 [info ]: Finished scheduling [  0.00s]
+09:03:23.464237 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [568ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+09:03:23.465627 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:03:23.630814Z | 57cc1e47-457b-4184-950a-4e12f3c94f49 ====================
+09:03:23.631113 [info ]: Started loading project
+09:03:23.634351 [info ]: Loading ~/.dbt/profiles.yml
+09:03:23.659647 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:03:23.678963 [info ]: Finished loading project [  0.05s]
+09:03:23.793040 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [162ms]
+09:03:23.793339 [info ]: Cached model count updated: 7 models (accurate)
+09:03:23.890965 [info ]: Started scheduling
+09:03:23.891695 [info ]: Finished scheduling [  0.00s]
+09:03:23.908540 [info ]: Started building task graph
+09:03:23.910135 [info ]: Finished building task graph [  0.00s]
+09:03:23.924245 [info ]: Started rendering (1 nodes)
+09:03:23.924334 [info ]: Started model DW.dim_country
+09:03:23.924361 [debug]: Started rendering model DW.dim_country
+09:03:23.926521 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:03:23.926864 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:03:23.926932 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:03:23.926998 [info ]: Started analyzing (1 nodes)
+09:03:23.927055 [debug]: Started analyzing model DW.dim_country
+09:03:23.928725 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:03:23.928798 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:03:23.928883 [info ]: Started running (1 nodes)
+09:03:23.928916 [info ]: Started running model DW.dim_country
+09:03:23.934635 [debug]: Snowflake driver resolved: snowflake 0.21.0.dev+dbt0.21.17
+09:03:27.741312 [debug]: Query executed on node unknown:
+
+  
+  select
+    row_number() over(order by country_id) as sk_country,
+    country_id,
+    country_name,
+    continent,
+    income_group,
+    true as is_current
+from (
+
+    select distinct
+        country_id,
+        country_name,
+        continent,
+        income_group
+    from GDP_ANALYTICS.DW.stg_countries
+
+)
+  
+  limit 1000
+
+09:03:27.884123 [info ]: Query show_model_gdp_analytics_dim_country
+┌────────────┬────────────┬────────────────┬───────────────┬──────────────┬────────────┐
+│ SK_COUNTRY ┆ COUNTRY_ID ┆ COUNTRY_NAME   ┆ CONTINENT     ┆ INCOME_GROUP ┆ IS_CURRENT │
+╞════════════╪════════════╪════════════════╪═══════════════╪══════════════╪════════════╡
+│ 1          ┆ CT001      ┆ India          ┆ Asia          ┆ Lower-Middle ┆ true       │
+│ 2          ┆ CT002      ┆ United States  ┆ North America ┆ High         ┆ true       │
+│ 3          ┆ CT003      ┆ China          ┆ Asia          ┆ Upper-Middle ┆ true       │
+│ 4          ┆ CT004      ┆ Japan          ┆ Asia          ┆ High         ┆ true       │
+│ 5          ┆ CT005      ┆ Germany        ┆ Europe        ┆ High         ┆ true       │
+│ 6          ┆ CT006      ┆ United Kingdom ┆ Europe        ┆ High         ┆ true       │
+│ 7          ┆ CT007      ┆ France         ┆ Europe        ┆ High         ┆ true       │
+│ 8          ┆ CT008      ┆ Brazil         ┆ South America ┆ Upper-Middle ┆ true       │
+│ 9          ┆ CT009      ┆ Canada         ┆ North America ┆ High         ┆ true       │
+│ 10         ┆ CT010      ┆ Australia      ┆ Oceania       ┆ High         ┆ true       │
+│ 11         ┆ CT011      ┆ South Korea    ┆ Asia          ┆ High         ┆ true       │
+│ 12         ┆ CT012      ┆ Indonesia      ┆ Asia          ┆ Lower-Middle ┆ true       │
+│ 13         ┆ CT013      ┆ Mexico         ┆ North America ┆ Upper-Middle ┆ true       │
+│ 14         ┆ CT014      ┆ Saudi Arabia   ┆ Asia          ┆ High         ┆ true       │
+│ 15         ┆ CT015      ┆ South Africa   ┆ Africa        ┆ Upper-Middle ┆ true       │
+└────────────┴────────────┴────────────────┴───────────────┴──────────────┴────────────┘
+15 rows.
+09:03:27.886856 [info ]: Finished running [  3.96s] model DW.dim_country [success]
+09:03:27.886935 [info ]: Finished running [  3.96s] (1 nodes, 0 skipped, 0 errors)
+09:03:27.886956 [info ]:  Succeeded [  3.96s] model DW.dim_country (view)
+==================== 2026-09-08T09:03:29.506403Z | e6aba68e-857e-40d3-885d-f184b5e7f4c0 ====================
+09:03:29.506668 [info ]: Started loading project
+09:03:29.508747 [info ]: Loading ~/.dbt/profiles.yml
+09:03:29.511722 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:03:29.526604 [info ]: Finished loading project [  0.02s]
+09:03:29.557544 [info ]: Cached model count updated: 7 models (estimate)
+09:03:29.557578 [info ]: Cached model count updated: 7 models (accurate)
+09:03:29.557615 [info ]: Started scheduling
+09:03:29.557708 [info ]: Finished scheduling [  0.00s]
+09:03:29.557727 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+09:03:29.560617 [info ]: Started building task graph
+09:03:29.560743 [info ]: Finished building task graph [  0.00s]
+09:03:29.566905 [info ]: Started rendering (8 nodes)
+09:03:29.567260 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+09:03:29.567295 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+09:03:29.567341 [info ]: Started model DW.fact_econ_observation
+09:03:29.567352 [debug]: Started rendering model DW.fact_econ_observation
+09:03:29.567368 [info ]: Started model DW.dim_indicator
+09:03:29.567380 [debug]: Started rendering model DW.dim_indicator
+09:03:29.567404 [info ]: Started model DW.stg_indicators
+09:03:29.567431 [debug]: Started rendering model DW.stg_indicators
+09:03:29.567458 [info ]: Started model DW.dim_date
+09:03:29.567469 [debug]: Started rendering model DW.dim_date
+09:03:29.567491 [info ]: Started model DW.stg_observations
+09:03:29.567500 [debug]: Started rendering model DW.stg_observations
+09:03:29.567522 [info ]: Started model DW.dim_country
+09:03:29.567531 [debug]: Started rendering model DW.dim_country
+09:03:29.567545 [info ]: Started model DW.stg_countries
+09:03:29.567555 [debug]: Started rendering model DW.stg_countries
+09:03:29.568607 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:03:29.568753 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:03:29.568817 [info ]: Started analyzing (8 nodes)
+09:03:29.568840 [debug]: Started analyzing model DW.dim_country
+09:03:29.568926 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:03:29.569038 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:03:29.569083 [debug]: Started analyzing model DW.stg_countries
+09:03:29.569530 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:03:29.569564 [info ]:  Succeeded [  0.00s] model DW.dim_country (view)
+09:03:29.569598 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:03:29.569614 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:03:29.572972 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:03:29.573398 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+09:03:29.575175 [debug]: Finished rendering [  0.01s] model DW.dim_indicator [success]
+09:03:29.575445 [debug]: Started analyzing model DW.dim_indicator
+09:03:29.575476 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:03:29.575974 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:03:29.578449 [debug]: Finished rendering [  0.01s] snapshot SNAPSHOTS.country_snapshot [success]
+09:03:29.579274 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+09:03:29.579578 [debug]: Started analyzing model DW.stg_observations
+09:03:29.579618 [debug]: Finished rendering [  0.01s] model DW.stg_observations [success]
+09:03:29.579808 [debug]: Finished rendering [  0.01s] model DW.stg_indicators [success]
+09:03:29.579887 [debug]: Started analyzing model DW.stg_indicators
+09:03:29.581369 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:03:29.581450 [info ]:  Succeeded [  0.01s] model DW.stg_indicators (view)
+09:03:29.583232 [debug]: Finished analyzing [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:03:29.583312 [info ]:  Succeeded [  0.01s] snapshot SNAPSHOTS.country_snapshot (snapshot)
+09:03:29.586063 [debug]: Finished analyzing [  0.01s] model DW.stg_observations [success]
+09:03:29.586496 [info ]:  Succeeded [  0.02s] model DW.stg_observations (view)
+09:03:29.589454 [debug]: Finished analyzing [  0.01s] model DW.dim_indicator [success]
+09:03:29.589547 [info ]:  Succeeded [  0.02s] model DW.dim_indicator (view)
+09:03:29.592290 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:03:29.592481 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:03:29.592823 [debug]: Finished rendering [  0.03s] model DW.fact_econ_observation [success]
+09:03:29.593006 [debug]: Started analyzing model DW.fact_econ_observation
+09:03:29.593152 [debug]: Finished rendering [  0.03s] model DW.dim_date [success]
+09:03:29.593190 [info ]: Finished rendering [  0.03s] (8 nodes, 0 skipped, 0 errors)
+09:03:29.593222 [debug]: Started analyzing model DW.dim_date
+09:03:29.595378 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:03:29.595467 [info ]:  Succeeded [  0.03s] model DW.dim_date (view)
+09:03:29.612632 [debug]: Finished analyzing [  0.02s] model DW.fact_econ_observation [success]
+09:03:29.612716 [info ]: Finished analyzing [  0.04s] (8 nodes, 0 skipped, 0 errors)
+09:03:29.612750 [info ]:  Succeeded [  0.04s] model DW.fact_econ_observation (view)
+09:03:29.621140 [info ]: Started scheduling
+09:03:29.621223 [info ]: Finished scheduling [  0.00s]
+09:03:29.622216 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [115ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+09:03:29.622384 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:04:03.572540Z | 5b1576bb-2527-40d4-a574-8231238a8bf0 ====================
+09:04:03.572608 [info ]: Started loading project
+09:04:03.573084 [info ]: Loading ~/.dbt/profiles.yml
+09:04:03.574228 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:03.579360 [info ]: Finished loading project [  0.01s]
+09:04:03.602764 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [30ms]
+09:04:03.602953 [info ]: Cached model count updated: 7 models (accurate)
+09:04:03.631579 [info ]: Started scheduling
+09:04:03.631685 [info ]: Finished scheduling [  0.00s]
+09:04:03.634995 [info ]: Started building task graph
+09:04:03.635123 [info ]: Finished building task graph [  0.00s]
+09:04:03.638876 [info ]: Started rendering (1 nodes)
+09:04:03.638934 [info ]: Started model DW.dim_date
+09:04:03.638949 [debug]: Started rendering model DW.dim_date
+09:04:03.639543 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:03.639725 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:03.639752 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:03.639768 [info ]: Started analyzing (1 nodes)
+09:04:03.639775 [debug]: Started analyzing model DW.dim_date
+09:04:03.640015 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:03.640024 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:03.640032 [info ]: Started running (1 nodes)
+09:04:03.640038 [info ]: Started running model DW.dim_date
+09:04:04.957219 [debug]: Query executed on node unknown:
+
+  
+  select
+    row_number() over(order by year) as sk_date,
+    year
+from (
+    select distinct year
+    from GDP_ANALYTICS.DW.stg_observations
+)
+  
+  limit 1000
+
+09:04:05.057308 [info ]: Query show_model_gdp_analytics_dim_date
+┌─────────┬──────┐
+│ SK_DATE ┆ YEAR │
+╞═════════╪══════╡
+│ 1       ┆ 2016 │
+│ 2       ┆ 2018 │
+│ 3       ┆ 2019 │
+│ 4       ┆ 2020 │
+│ 5       ┆ 2021 │
+│ 6       ┆ 2022 │
+│ 7       ┆ 2023 │
+│ 8       ┆ 2024 │
+│ 9       ┆ 2025 │
+└─────────┴──────┘
+9 rows.
+09:04:05.057482 [info ]: Finished running [  1.42s] model DW.dim_date [success]
+09:04:05.057525 [info ]: Finished running [  1.42s] (1 nodes, 0 skipped, 0 errors)
+09:04:05.057544 [info ]:  Succeeded [  1.42s] model DW.dim_date (view)
+==================== 2026-09-08T09:04:06.693958Z | 62c53e73-1572-4c27-88e3-68ff42e07976 ====================
+09:04:06.694234 [info ]: Started loading project
+09:04:06.695628 [info ]: Loading ~/.dbt/profiles.yml
+09:04:06.697994 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:06.709703 [info ]: Finished loading project [  0.02s]
+09:04:06.747099 [info ]: Cached model count updated: 7 models (estimate)
+09:04:06.747139 [info ]: Cached model count updated: 7 models (accurate)
+09:04:06.747176 [info ]: Started scheduling
+09:04:06.747256 [info ]: Finished scheduling [  0.00s]
+09:04:06.747277 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+09:04:06.748786 [info ]: Started building task graph
+09:04:06.748890 [info ]: Finished building task graph [  0.00s]
+09:04:06.753410 [info ]: Started rendering (8 nodes)
+09:04:06.753463 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+09:04:06.753476 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+09:04:06.753516 [info ]: Started model DW.fact_econ_observation
+09:04:06.753528 [debug]: Started rendering model DW.fact_econ_observation
+09:04:06.753549 [info ]: Started model DW.dim_indicator
+09:04:06.753607 [debug]: Started rendering model DW.dim_indicator
+09:04:06.753642 [info ]: Started model DW.stg_indicators
+09:04:06.753663 [debug]: Started rendering model DW.stg_indicators
+09:04:06.753686 [info ]: Started model DW.dim_date
+09:04:06.753697 [debug]: Started rendering model DW.dim_date
+09:04:06.753719 [info ]: Started model DW.stg_observations
+09:04:06.753728 [debug]: Started rendering model DW.stg_observations
+09:04:06.753745 [info ]: Started model DW.dim_country
+09:04:06.753761 [debug]: Started rendering model DW.dim_country
+09:04:06.753791 [info ]: Started model DW.stg_countries
+09:04:06.753812 [debug]: Started rendering model DW.stg_countries
+09:04:06.754490 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+09:04:06.754693 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:06.754725 [debug]: Finished rendering [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:06.754864 [info ]: Started analyzing (8 nodes)
+09:04:06.754890 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+09:04:06.755014 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:06.755471 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:06.755478 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:06.755530 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:06.755596 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:06.755643 [debug]: Finished analyzing [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:06.755664 [info ]:  Succeeded [  0.00s] snapshot SNAPSHOTS.country_snapshot (snapshot)
+09:04:06.755700 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:06.755699 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:06.755721 [debug]: Started analyzing model DW.dim_indicator
+09:04:06.755784 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:06.755806 [debug]: Started analyzing model DW.dim_date
+09:04:06.755804 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:04:06.755829 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:06.755843 [debug]: Started analyzing model DW.stg_observations
+09:04:06.755861 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:06.755873 [debug]: Started analyzing model DW.stg_indicators
+09:04:06.755894 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:04:06.755917 [debug]: Started analyzing model DW.dim_country
+09:04:06.755926 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:06.756020 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:06.756053 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:06.756082 [debug]: Started analyzing model DW.stg_countries
+09:04:06.756175 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:06.756199 [info ]:  Succeeded [  0.00s] model DW.dim_date (view)
+09:04:06.756243 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:06.756258 [info ]:  Succeeded [  0.00s] model DW.dim_indicator (view)
+09:04:06.756285 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:06.756298 [info ]:  Succeeded [  0.00s] model DW.stg_observations (view)
+09:04:06.756319 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:06.756346 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:04:06.756368 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:06.756381 [info ]:  Succeeded [  0.00s] model DW.stg_indicators (view)
+09:04:06.756580 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:04:06.756600 [info ]:  Succeeded [  0.00s] model DW.dim_country (view)
+09:04:06.758819 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:06.758854 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:06.758864 [info ]:  Succeeded [  0.00s] model DW.fact_econ_observation (view)
+09:04:06.763480 [info ]: Started scheduling
+09:04:06.763552 [info ]: Finished scheduling [  0.00s]
+09:04:06.763625 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [69ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+09:04:06.763725 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:04:09.813335Z | ef042da6-1024-4840-8842-1e21d23915a1 ====================
+09:04:09.813508 [info ]: Started loading project
+09:04:09.814335 [info ]: Loading ~/.dbt/profiles.yml
+09:04:09.817341 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:09.827707 [info ]: Finished loading project [  0.01s]
+09:04:09.862205 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [48ms]
+09:04:09.862290 [info ]: Cached model count updated: 7 models (accurate)
+09:04:09.892700 [info ]: Started scheduling
+09:04:09.892784 [info ]: Finished scheduling [  0.00s]
+09:04:09.894186 [info ]: Started building task graph
+09:04:09.894254 [info ]: Finished building task graph [  0.00s]
+09:04:09.896816 [info ]: Started rendering (1 nodes)
+09:04:09.896839 [info ]: Started model DW.dim_indicator
+09:04:09.896848 [debug]: Started rendering model DW.dim_indicator
+09:04:09.897242 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:09.897353 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:09.897370 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:09.897384 [info ]: Started analyzing (1 nodes)
+09:04:09.897389 [debug]: Started analyzing model DW.dim_indicator
+09:04:09.897620 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:09.897627 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:09.897635 [info ]: Started running (1 nodes)
+09:04:09.897638 [info ]: Started running model DW.dim_indicator
+09:04:10.960763 [debug]: Query executed on node unknown:
+
+  
+  select
+    row_number() over(order by indicator_id) as sk_indicator,
+    indicator_id,
+    indicator_code,
+    indicator_name,
+    unit,
+    frequency,
+    description,
+    source_system,
+    status
+from GDP_ANALYTICS.DW.stg_indicators
+  
+  limit 1000
+
+09:04:11.094286 [info ]: Query show_model_gdp_analytics_dim_indicator
+┌──────────────┬──────────────┬────────────────────┬──────────────────────────────┬───────┬───────────┬──────────────────────────────────────┬───────────────┬────────┐
+│ SK_INDICATOR ┆ INDICATOR_ID ┆ INDICATOR_CODE     ┆ INDICATOR_NAME               ┆ UNIT  ┆ FREQUENCY ┆ DESCRIPTION                          ┆ SOURCE_SYSTEM ┆ STATUS │
+╞══════════════╪══════════════╪════════════════════╪══════════════════════════════╪═══════╪═══════════╪══════════════════════════════════════╪═══════════════╪════════╡
+│ 1            ┆ IN001        ┆ GDP_CURRENT_USD    ┆ GDP (Current US$)            ┆ USD   ┆ Annual    ┆ Nominal GDP in current US dollars    ┆ WorldBank     ┆ ACTIVE │
+│ 2            ┆ IN002        ┆ GDP_CONST_2015_USD ┆ GDP (Constant 2015 US$)      ┆ USD   ┆ Annual    ┆ Real GDP in constant 2015 US dollars ┆ WorldBank     ┆ ACTIVE │
+│ 3            ┆ IN003        ┆ GDP_GROWTH_PCT     ┆ GDP Growth (Annual %)        ┆ PCT   ┆ Annual    ┆ Annual real GDP growth rate          ┆ IMF           ┆ ACTIVE │
+│ 4            ┆ IN004        ┆ GDP_PER_CAPITA_USD ┆ GDP per Capita (Current US$) ┆ USD   ┆ Annual    ┆ Nominal GDP per capita               ┆ WorldBank     ┆ ACTIVE │
+│ 5            ┆ IN005        ┆ INFLATION_CPI_PCT  ┆ Inflation (CPI, %)           ┆ PCT   ┆ Annual    ┆ Consumer price inflation rate        ┆ IMF           ┆ ACTIVE │
+│ 6            ┆ IN006        ┆ POPULATION         ┆ Population                   ┆ COUNT ┆ Annual    ┆ Total population                     ┆ UN            ┆ ACTIVE │
+└──────────────┴──────────────┴────────────────────┴──────────────────────────────┴───────┴───────────┴──────────────────────────────────────┴───────────────┴────────┘
+6 rows.
+09:04:11.094443 [info ]: Finished running [  1.20s] model DW.dim_indicator [success]
+09:04:11.094476 [info ]: Finished running [  1.20s] (1 nodes, 0 skipped, 0 errors)
+09:04:11.094491 [info ]:  Succeeded [  1.20s] model DW.dim_indicator (view)
+==================== 2026-09-08T09:04:12.732676Z | dc8091d0-a1b0-4793-9e88-50976377136c ====================
+09:04:12.732905 [info ]: Started loading project
+09:04:12.734140 [info ]: Loading ~/.dbt/profiles.yml
+09:04:12.737637 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:12.749168 [info ]: Finished loading project [  0.02s]
+09:04:12.782497 [info ]: Cached model count updated: 7 models (estimate)
+09:04:12.782521 [info ]: Cached model count updated: 7 models (accurate)
+09:04:12.782563 [info ]: Started scheduling
+09:04:12.782639 [info ]: Finished scheduling [  0.00s]
+09:04:12.782657 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+09:04:12.784037 [info ]: Started building task graph
+09:04:12.784134 [info ]: Finished building task graph [  0.00s]
+09:04:12.786356 [info ]: Started rendering (8 nodes)
+09:04:12.786382 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+09:04:12.786389 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+09:04:12.786424 [info ]: Started model DW.fact_econ_observation
+09:04:12.786432 [debug]: Started rendering model DW.fact_econ_observation
+09:04:12.786440 [info ]: Started model DW.dim_indicator
+09:04:12.786444 [debug]: Started rendering model DW.dim_indicator
+09:04:12.786452 [info ]: Started model DW.stg_indicators
+09:04:12.786457 [debug]: Started rendering model DW.stg_indicators
+09:04:12.786465 [info ]: Started model DW.dim_date
+09:04:12.786473 [debug]: Started rendering model DW.dim_date
+09:04:12.786481 [info ]: Started model DW.stg_observations
+09:04:12.786485 [debug]: Started rendering model DW.stg_observations
+09:04:12.786492 [info ]: Started model DW.dim_country
+09:04:12.786496 [debug]: Started rendering model DW.dim_country
+09:04:12.786505 [info ]: Started model DW.stg_countries
+09:04:12.786518 [debug]: Started rendering model DW.stg_countries
+09:04:12.787137 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:12.787274 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:12.787343 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+09:04:12.787430 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:12.787488 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:12.787592 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:12.787683 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:12.787699 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:12.787751 [info ]: Started analyzing (8 nodes)
+09:04:12.787778 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:12.787812 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:12.787824 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:04:12.787829 [debug]: Started analyzing model DW.stg_indicators
+09:04:12.787848 [debug]: Finished rendering [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:12.787881 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+09:04:12.787898 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:12.787952 [debug]: Started analyzing model DW.stg_observations
+09:04:12.787987 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:12.788006 [debug]: Started analyzing model DW.dim_date
+09:04:12.788026 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:12.788039 [debug]: Started analyzing model DW.stg_countries
+09:04:12.788055 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:12.788067 [debug]: Started analyzing model DW.dim_indicator
+09:04:12.788088 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:04:12.788101 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:12.788116 [debug]: Started analyzing model DW.dim_country
+09:04:12.788302 [debug]: Finished analyzing [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:12.788333 [info ]:  Succeeded [  0.00s] snapshot SNAPSHOTS.country_snapshot (snapshot)
+09:04:12.788448 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:12.788490 [info ]:  Succeeded [  0.00s] model DW.stg_indicators (view)
+09:04:12.788531 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:12.788548 [info ]:  Succeeded [  0.00s] model DW.stg_observations (view)
+09:04:12.788587 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:12.788602 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:04:12.788650 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:12.788668 [info ]:  Succeeded [  0.00s] model DW.dim_date (view)
+09:04:12.788750 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:12.788775 [info ]:  Succeeded [  0.00s] model DW.dim_indicator (view)
+09:04:12.788944 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:04:12.788974 [info ]:  Succeeded [  0.00s] model DW.dim_country (view)
+09:04:12.791360 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:12.791414 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:12.791432 [info ]:  Succeeded [  0.00s] model DW.fact_econ_observation (view)
+09:04:12.797851 [info ]: Started scheduling
+09:04:12.797946 [info ]: Finished scheduling [  0.00s]
+09:04:12.798036 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [65ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+09:04:12.798143 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:04:15.294077Z | 0d5fe9f9-890e-4047-a44a-2715ebc6561f ====================
+09:04:15.294178 [info ]: Started loading project
+09:04:15.294726 [info ]: Loading ~/.dbt/profiles.yml
+09:04:15.296205 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:15.301157 [info ]: Finished loading project [  0.01s]
+09:04:15.322054 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [27ms]
+09:04:15.322139 [info ]: Cached model count updated: 7 models (accurate)
+09:04:15.345697 [info ]: Started scheduling
+09:04:15.345798 [info ]: Finished scheduling [  0.00s]
+09:04:15.347158 [info ]: Started building task graph
+09:04:15.347225 [info ]: Finished building task graph [  0.00s]
+09:04:15.350716 [info ]: Started rendering (1 nodes)
+09:04:15.350792 [info ]: Started model DW.fact_econ_observation
+09:04:15.350818 [debug]: Started rendering model DW.fact_econ_observation
+09:04:15.351888 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:15.352041 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:15.352068 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:15.352096 [info ]: Started analyzing (1 nodes)
+09:04:15.352107 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:15.354207 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:15.354238 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:15.354259 [info ]: Started running (1 nodes)
+09:04:15.354267 [info ]: Started running model DW.fact_econ_observation
+09:04:16.642289 [debug]: Query executed on node unknown:
+
+  
+  select
+    c.sk_country,
+    i.sk_indicator,
+    d.sk_date,
+    o.value,
+    o.source_system,
+    o.vintage_date
+from GDP_ANALYTICS.DW.stg_observations o
+join GDP_ANALYTICS.DW.dim_country c
+    on o.country_id = c.country_id
+join GDP_ANALYTICS.DW.dim_indicator i
+    on o.indicator_id = i.indicator_id
+join GDP_ANALYTICS.DW.dim_date d
+    on o.year = d.year
+  
+  limit 1000
+
+09:04:16.736889 [info ]: Query show_model_gdp_analytics_fact_econ_observation
+┌────────────┬──────────────┬─────────┬──────────┬───────────────┬──────────────┐
+│ SK_COUNTRY ┆ SK_INDICATOR ┆ SK_DATE ┆ VALUE    ┆ SOURCE_SYSTEM ┆ VINTAGE_DATE │
+╞════════════╪══════════════╪═════════╪══════════╪═══════════════╪══════════════╡
+│ 4          ┆ 2            ┆ 3       ┆ 4837.84  ┆ IMF           ┆ 2026-01-18   │
+│ 7          ┆ 4            ┆ 8       ┆ 49997.25 ┆ OECD          ┆ 2026-01-19   │
+│ 7          ┆ 3            ┆ 6       ┆ 3.96     ┆ WorldBank     ┆ 2026-01-04   │
+│ 9          ┆ 3            ┆ 1       ┆ 0.67     ┆ IMF           ┆ 2026-01-12   │
+│ 6          ┆ 4            ┆ 3       ┆ 48960.61 ┆ WorldBank     ┆ 2026-01-15   │
+│ 8          ┆ 1            ┆ 1       ┆ 1940.76  ┆ WorldBank     ┆ 2026-01-06   │
+│ 1          ┆ 4            ┆ 6       ┆ 2098.98  ┆ OECD          ┆ 2026-01-04   │
+│ 9          ┆ 2            ┆ 9       ┆ 2657.87  ┆ UN            ┆ 2026-01-16   │
+│ 9          ┆ 4            ┆ 1       ┆ 52411.51 ┆ WorldBank     ┆ 2026-01-16   │
+│ 9          ┆ 3            ┆ 8       ┆ 5.96     ┆ WorldBank     ┆ 2026-01-11   │
+│ 9          ┆ 1            ┆ 9       ┆ 2832.89  ┆ UN            ┆ 2026-01-18   │
+│ 4          ┆ 4            ┆ 9       ┆ 47125.53 ┆ WorldBank     ┆ 2026-01-11   │
+│ 5          ┆ 4            ┆ 3       ┆ 55403.75 ┆ OECD          ┆ 2026-01-09   │
+│ 3          ┆ 4            ┆ 2       ┆ 9996.94  ┆ UN            ┆ 2026-01-01   │
+│ 7          ┆ 1            ┆ 8       ┆ 4031.08  ┆ OECD          ┆ 2026-01-19   │
+│ 8          ┆ 4            ┆ 6       ┆ 9060.    ┆ OECD          ┆ 2026-01-05   │
+│ 7          ┆ 4            ┆ 5       ┆ 46448.57 ┆ OECD          ┆ 2026-01-18   │
+│ 7          ┆ 3            ┆ 7       ┆ 2.6      ┆ WorldBank     ┆ 2026-01-05   │
+│ 4          ┆ 4            ┆ 4       ┆ 41270.31 ┆ OECD          ┆ 2026-01-02   │
+│ 1          ┆ 3            ┆ 1       ┆ -2.16    ┆ UN            ┆ 2026-01-03   │
+│ 9          ┆ 2            ┆ 5       ┆ 2553.25  ┆ OECD          ┆ 2026-01-03   │
+│ 9          ┆ 1            ┆ 3       ┆ 2373.05  ┆ UN            ┆ 2026-01-06   │
+│ 10         ┆ 1            ┆ 9       ┆ 2199.84  ┆ IMF           ┆ 2026-01-19   │
+│ 3          ┆ 2            ┆ 8       ┆ 22766.5  ┆ UN            ┆ 2026-01-07   │
+│ 1          ┆ 4            ┆ 7       ┆ 2032.61  ┆ WorldBank     ┆ 2026-01-04   │
+└────────────┴──────────────┴─────────┴──────────┴───────────────┴──────────────┘
+25 rows.
+09:04:16.737133 [info ]: Finished running [  1.38s] model DW.fact_econ_observation [success]
+09:04:16.737165 [info ]: Finished running [  1.38s] (1 nodes, 0 skipped, 0 errors)
+09:04:16.737176 [info ]:  Succeeded [  1.39s] model DW.fact_econ_observation (view)
+==================== 2026-09-08T09:04:18.324082Z | 84f13b51-ce76-401d-8429-8dfe6287e0fb ====================
+09:04:18.324401 [info ]: Started loading project
+09:04:18.326133 [info ]: Loading ~/.dbt/profiles.yml
+09:04:18.330270 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:18.350732 [info ]: Finished loading project [  0.03s]
+09:04:18.391678 [info ]: Cached model count updated: 7 models (estimate)
+09:04:18.391703 [info ]: Cached model count updated: 7 models (accurate)
+09:04:18.391755 [info ]: Started scheduling
+09:04:18.391848 [info ]: Finished scheduling [  0.00s]
+09:04:18.391867 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+09:04:18.393407 [info ]: Started building task graph
+09:04:18.393501 [info ]: Finished building task graph [  0.00s]
+09:04:18.395682 [info ]: Started rendering (8 nodes)
+09:04:18.395704 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+09:04:18.395728 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+09:04:18.395753 [info ]: Started model DW.fact_econ_observation
+09:04:18.395759 [debug]: Started rendering model DW.fact_econ_observation
+09:04:18.395766 [info ]: Started model DW.dim_indicator
+09:04:18.395770 [debug]: Started rendering model DW.dim_indicator
+09:04:18.395776 [info ]: Started model DW.stg_indicators
+09:04:18.395780 [debug]: Started rendering model DW.stg_indicators
+09:04:18.395787 [info ]: Started model DW.dim_date
+09:04:18.395791 [debug]: Started rendering model DW.dim_date
+09:04:18.395798 [info ]: Started model DW.stg_observations
+09:04:18.395802 [debug]: Started rendering model DW.stg_observations
+09:04:18.395808 [info ]: Started model DW.dim_country
+09:04:18.395811 [debug]: Started rendering model DW.dim_country
+09:04:18.395819 [info ]: Started model DW.stg_countries
+09:04:18.395823 [debug]: Started rendering model DW.stg_countries
+09:04:18.396295 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:18.396398 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:18.396444 [info ]: Started analyzing (8 nodes)
+09:04:18.396454 [debug]: Started analyzing model DW.stg_indicators
+09:04:18.396456 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:18.396515 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:18.396529 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+09:04:18.396541 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:18.396564 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:18.396651 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:18.396685 [debug]: Started analyzing model DW.dim_date
+09:04:18.396718 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:18.396731 [debug]: Started analyzing model DW.stg_observations
+09:04:18.396729 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:04:18.396829 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:18.396840 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:18.396885 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:18.396918 [debug]: Finished rendering [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:18.396947 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+09:04:18.396983 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:18.397000 [debug]: Started analyzing model DW.dim_indicator
+09:04:18.397034 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:04:18.397048 [debug]: Started analyzing model DW.dim_country
+09:04:18.397087 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:18.397103 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:18.397116 [debug]: Started analyzing model DW.stg_countries
+09:04:18.397170 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:18.397208 [info ]:  Succeeded [-------] model DW.stg_indicators (view)
+09:04:18.397242 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:18.397255 [info ]:  Succeeded [-------] model DW.stg_observations (view)
+09:04:18.397277 [debug]: Finished analyzing [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:18.397290 [info ]:  Succeeded [  0.00s] snapshot SNAPSHOTS.country_snapshot (snapshot)
+09:04:18.397319 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:18.397331 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:04:18.397517 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:18.397550 [info ]:  Succeeded [  0.00s] model DW.dim_indicator (view)
+09:04:18.397576 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:04:18.397587 [info ]:  Succeeded [  0.00s] model DW.dim_country (view)
+09:04:18.397606 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:18.397618 [info ]:  Succeeded [-------] model DW.dim_date (view)
+09:04:18.400227 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:18.400344 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:18.400403 [info ]:  Succeeded [  0.00s] model DW.fact_econ_observation (view)
+09:04:18.404977 [info ]: Started scheduling
+09:04:18.405057 [info ]: Finished scheduling [  0.00s]
+09:04:18.405155 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [81ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+09:04:18.405761 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:04:22.400439Z | 3aec86a7-16c0-45a6-85b2-970825527a9f ====================
+09:04:22.400630 [info ]: Started loading project
+09:04:22.401853 [info ]: Loading ~/.dbt/profiles.yml
+09:04:22.403369 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:22.406785 [info ]: Finished loading project [  0.01s]
+09:04:22.430887 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [30ms]
+09:04:22.430982 [info ]: Cached model count updated: 7 models (accurate)
+09:04:22.467488 [info ]: Started scheduling
+09:04:22.467772 [info ]: Finished scheduling [  0.00s]
+09:04:22.471946 [info ]: Started building task graph
+09:04:22.472077 [info ]: Finished building task graph [  0.00s]
+09:04:22.475044 [info ]: Started rendering (1 nodes)
+09:04:22.475082 [info ]: Started model DW.stg_countries
+09:04:22.475093 [debug]: Started rendering model DW.stg_countries
+09:04:22.475492 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:22.475596 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:22.475614 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:22.475633 [info ]: Started analyzing (1 nodes)
+09:04:22.475640 [debug]: Started analyzing model DW.stg_countries
+09:04:22.475967 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:22.475977 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:22.475988 [info ]: Started running (1 nodes)
+09:04:22.475991 [info ]: Started running model DW.stg_countries
+09:04:23.964446 [debug]: Query executed on node unknown:
+
+  
+  select distinct
+    country_id,
+    country_name,
+    continent,
+    income_group
+from RAW.RAW_COUNTRIES
+  
+  limit 1000
+
+09:04:24.057918 [info ]: Query show_model_gdp_analytics_stg_countries
+┌────────────┬────────────────┬───────────────┬──────────────┐
+│ COUNTRY_ID ┆ COUNTRY_NAME   ┆ CONTINENT     ┆ INCOME_GROUP │
+╞════════════╪════════════════╪═══════════════╪══════════════╡
+│ CT002      ┆ United States  ┆ North America ┆ High         │
+│ CT004      ┆ Japan          ┆ Asia          ┆ High         │
+│ CT005      ┆ Germany        ┆ Europe        ┆ High         │
+│ CT009      ┆ Canada         ┆ North America ┆ High         │
+│ CT010      ┆ Australia      ┆ Oceania       ┆ High         │
+│ CT011      ┆ South Korea    ┆ Asia          ┆ High         │
+│ CT006      ┆ United Kingdom ┆ Europe        ┆ High         │
+│ CT012      ┆ Indonesia      ┆ Asia          ┆ Lower-Middle │
+│ CT001      ┆ India          ┆ Asia          ┆ Lower-Middle │
+│ CT007      ┆ France         ┆ Europe        ┆ High         │
+│ CT008      ┆ Brazil         ┆ South America ┆ Upper-Middle │
+│ CT013      ┆ Mexico         ┆ North America ┆ Upper-Middle │
+│ CT014      ┆ Saudi Arabia   ┆ Asia          ┆ High         │
+│ CT015      ┆ South Africa   ┆ Africa        ┆ Upper-Middle │
+│ CT003      ┆ China          ┆ Asia          ┆ Upper-Middle │
+└────────────┴────────────────┴───────────────┴──────────────┘
+15 rows.
+09:04:24.058144 [info ]: Finished running [  1.58s] model DW.stg_countries [success]
+09:04:24.058186 [info ]: Finished running [  1.58s] (1 nodes, 0 skipped, 0 errors)
+09:04:24.058206 [info ]:  Succeeded [  1.58s] model DW.stg_countries (view)
+==================== 2026-09-08T09:04:25.653973Z | ac92b99a-076b-4e55-b9ff-e4873bed6294 ====================
+09:04:25.654202 [info ]: Started loading project
+09:04:25.655751 [info ]: Loading ~/.dbt/profiles.yml
+09:04:25.660278 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:25.680844 [info ]: Finished loading project [  0.03s]
+09:04:25.703943 [info ]: Cached model count updated: 7 models (estimate)
+09:04:25.703968 [info ]: Cached model count updated: 7 models (accurate)
+09:04:25.703999 [info ]: Started scheduling
+09:04:25.704078 [info ]: Finished scheduling [  0.00s]
+09:04:25.704095 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+09:04:25.705505 [info ]: Started building task graph
+09:04:25.705574 [info ]: Finished building task graph [  0.00s]
+09:04:25.707720 [info ]: Started rendering (8 nodes)
+09:04:25.707740 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+09:04:25.707748 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+09:04:25.707768 [info ]: Started model DW.fact_econ_observation
+09:04:25.707785 [debug]: Started rendering model DW.fact_econ_observation
+09:04:25.707793 [info ]: Started model DW.dim_indicator
+09:04:25.707797 [debug]: Started rendering model DW.dim_indicator
+09:04:25.707804 [info ]: Started model DW.stg_indicators
+09:04:25.707809 [debug]: Started rendering model DW.stg_indicators
+09:04:25.707816 [info ]: Started model DW.dim_date
+09:04:25.707821 [debug]: Started rendering model DW.dim_date
+09:04:25.707827 [info ]: Started model DW.stg_observations
+09:04:25.707832 [debug]: Started rendering model DW.stg_observations
+09:04:25.707839 [info ]: Started model DW.dim_country
+09:04:25.707843 [debug]: Started rendering model DW.dim_country
+09:04:25.707849 [info ]: Started model DW.stg_countries
+09:04:25.707852 [debug]: Started rendering model DW.stg_countries
+09:04:25.708359 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+09:04:25.708532 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:25.708557 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:25.708575 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:25.708580 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:04:25.708587 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:25.708601 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:25.708626 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:25.708629 [debug]: Finished rendering [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:25.708684 [info ]: Started analyzing (8 nodes)
+09:04:25.708717 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+09:04:25.708763 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:25.708796 [debug]: Started analyzing model DW.dim_indicator
+09:04:25.708824 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:25.708844 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:25.708874 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:25.708897 [debug]: Started analyzing model DW.dim_date
+09:04:25.708926 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:04:25.708953 [debug]: Started analyzing model DW.dim_country
+09:04:25.708985 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:25.709012 [debug]: Started analyzing model DW.stg_observations
+09:04:25.709061 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:25.709091 [debug]: Started analyzing model DW.stg_indicators
+09:04:25.709132 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:25.709155 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:25.709175 [debug]: Started analyzing model DW.stg_countries
+09:04:25.709217 [debug]: Finished analyzing [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:25.709246 [info ]:  Succeeded [-------] snapshot SNAPSHOTS.country_snapshot (snapshot)
+09:04:25.709285 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:25.709308 [info ]:  Succeeded [  0.00s] model DW.dim_date (view)
+09:04:25.709336 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:25.709350 [info ]:  Succeeded [-------] model DW.dim_indicator (view)
+09:04:25.709381 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:25.709395 [info ]:  Succeeded [  0.00s] model DW.stg_indicators (view)
+09:04:25.709418 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:25.709438 [info ]:  Succeeded [  0.00s] model DW.stg_observations (view)
+09:04:25.709485 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:25.709503 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:04:25.709536 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:04:25.709556 [info ]:  Succeeded [  0.00s] model DW.dim_country (view)
+09:04:25.711029 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:25.711051 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:25.711058 [info ]:  Succeeded [  0.00s] model DW.fact_econ_observation (view)
+09:04:25.714927 [info ]: Started scheduling
+09:04:25.714996 [info ]: Finished scheduling [  0.00s]
+09:04:25.715062 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [61ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+09:04:25.715485 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:04:27.931632Z | 0e40126f-a6ec-40f7-a5f9-f30592605af7 ====================
+09:04:27.931735 [info ]: Started loading project
+09:04:27.932395 [info ]: Loading ~/.dbt/profiles.yml
+09:04:27.934774 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:27.938709 [info ]: Finished loading project [  0.01s]
+09:04:27.959828 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [28ms]
+09:04:27.959920 [info ]: Cached model count updated: 7 models (accurate)
+09:04:27.988539 [info ]: Started scheduling
+09:04:27.988738 [info ]: Finished scheduling [  0.00s]
+09:04:27.991062 [info ]: Started building task graph
+09:04:27.991125 [info ]: Finished building task graph [  0.00s]
+09:04:27.993354 [info ]: Started rendering (1 nodes)
+09:04:27.993379 [info ]: Started model DW.stg_indicators
+09:04:27.993400 [debug]: Started rendering model DW.stg_indicators
+09:04:27.993763 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:27.993852 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:27.993866 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:27.993879 [info ]: Started analyzing (1 nodes)
+09:04:27.993884 [debug]: Started analyzing model DW.stg_indicators
+09:04:27.994099 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:27.994106 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:27.994114 [info ]: Started running (1 nodes)
+09:04:27.994117 [info ]: Started running model DW.stg_indicators
+09:04:28.785641 [debug]: Query executed on node unknown:
+
+  
+  select
+    indicator_id,
+    indicator_code,
+    indicator_name,
+    unit,
+    frequency,
+    description,
+    source_system,
+    status
+from RAW.RAW_INDICATORS
+  
+  limit 1000
+
+09:04:28.924033 [info ]: Query show_model_gdp_analytics_stg_indicators
+┌──────────────┬────────────────────┬──────────────────────────────┬───────┬───────────┬──────────────────────────────────────┬───────────────┬────────┐
+│ INDICATOR_ID ┆ INDICATOR_CODE     ┆ INDICATOR_NAME               ┆ UNIT  ┆ FREQUENCY ┆ DESCRIPTION                          ┆ SOURCE_SYSTEM ┆ STATUS │
+╞══════════════╪════════════════════╪══════════════════════════════╪═══════╪═══════════╪══════════════════════════════════════╪═══════════════╪════════╡
+│ IN001        ┆ GDP_CURRENT_USD    ┆ GDP (Current US$)            ┆ USD   ┆ Annual    ┆ Nominal GDP in current US dollars    ┆ WorldBank     ┆ ACTIVE │
+│ IN002        ┆ GDP_CONST_2015_USD ┆ GDP (Constant 2015 US$)      ┆ USD   ┆ Annual    ┆ Real GDP in constant 2015 US dollars ┆ WorldBank     ┆ ACTIVE │
+│ IN003        ┆ GDP_GROWTH_PCT     ┆ GDP Growth (Annual %)        ┆ PCT   ┆ Annual    ┆ Annual real GDP growth rate          ┆ IMF           ┆ ACTIVE │
+│ IN004        ┆ GDP_PER_CAPITA_USD ┆ GDP per Capita (Current US$) ┆ USD   ┆ Annual    ┆ Nominal GDP per capita               ┆ WorldBank     ┆ ACTIVE │
+│ IN005        ┆ INFLATION_CPI_PCT  ┆ Inflation (CPI, %)           ┆ PCT   ┆ Annual    ┆ Consumer price inflation rate        ┆ IMF           ┆ ACTIVE │
+│ IN006        ┆ POPULATION         ┆ Population                   ┆ COUNT ┆ Annual    ┆ Total population                     ┆ UN            ┆ ACTIVE │
+└──────────────┴────────────────────┴──────────────────────────────┴───────┴───────────┴──────────────────────────────────────┴───────────────┴────────┘
+6 rows.
+09:04:28.924199 [info ]: Finished running [  0.93s] model DW.stg_indicators [success]
+09:04:28.924230 [info ]: Finished running [  0.93s] (1 nodes, 0 skipped, 0 errors)
+09:04:28.924252 [info ]:  Succeeded [  0.93s] model DW.stg_indicators (view)
+==================== 2026-09-08T09:04:30.557301Z | fd22f85e-cbaf-4257-8abb-f733d5cab7e2 ====================
+09:04:30.557469 [info ]: Started loading project
+09:04:30.558039 [info ]: Loading ~/.dbt/profiles.yml
+09:04:30.559055 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:30.562695 [info ]: Finished loading project [  0.01s]
+09:04:30.587125 [info ]: Cached model count updated: 7 models (estimate)
+09:04:30.587152 [info ]: Cached model count updated: 7 models (accurate)
+09:04:30.587183 [info ]: Started scheduling
+09:04:30.587261 [info ]: Finished scheduling [  0.00s]
+09:04:30.587280 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+09:04:30.588615 [info ]: Started building task graph
+09:04:30.588683 [info ]: Finished building task graph [  0.00s]
+09:04:30.590918 [info ]: Started rendering (8 nodes)
+09:04:30.590942 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+09:04:30.590951 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+09:04:30.590973 [info ]: Started model DW.fact_econ_observation
+09:04:30.590978 [debug]: Started rendering model DW.fact_econ_observation
+09:04:30.590985 [info ]: Started model DW.dim_indicator
+09:04:30.590991 [debug]: Started rendering model DW.dim_indicator
+09:04:30.590999 [info ]: Started model DW.stg_indicators
+09:04:30.591003 [debug]: Started rendering model DW.stg_indicators
+09:04:30.591013 [info ]: Started model DW.dim_date
+09:04:30.591018 [debug]: Started rendering model DW.dim_date
+09:04:30.591025 [info ]: Started model DW.stg_observations
+09:04:30.591029 [debug]: Started rendering model DW.stg_observations
+09:04:30.591035 [info ]: Started model DW.dim_country
+09:04:30.591039 [debug]: Started rendering model DW.dim_country
+09:04:30.591046 [info ]: Started model DW.stg_countries
+09:04:30.591050 [debug]: Started rendering model DW.stg_countries
+09:04:30.591519 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+09:04:30.591758 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:30.591758 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:30.591818 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:30.591835 [debug]: Finished rendering [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:30.591855 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:30.591874 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:30.591904 [info ]: Started analyzing (8 nodes)
+09:04:30.591902 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:04:30.591920 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+09:04:30.591972 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:30.591985 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:30.592001 [debug]: Started analyzing model DW.dim_indicator
+09:04:30.592019 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:30.592033 [debug]: Started analyzing model DW.dim_date
+09:04:30.592058 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:30.592070 [debug]: Started analyzing model DW.stg_countries
+09:04:30.592087 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:30.592099 [debug]: Started analyzing model DW.stg_indicators
+09:04:30.592123 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:30.592135 [debug]: Started analyzing model DW.stg_observations
+09:04:30.592149 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:04:30.592165 [debug]: Started analyzing model DW.dim_country
+09:04:30.592186 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:30.592195 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:30.592207 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:30.592427 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:30.592465 [info ]:  Succeeded [  0.00s] model DW.stg_observations (view)
+09:04:30.592492 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:30.592509 [info ]:  Succeeded [-------] model DW.dim_date (view)
+09:04:30.592530 [debug]: Finished analyzing [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:30.592542 [info ]:  Succeeded [-------] snapshot SNAPSHOTS.country_snapshot (snapshot)
+09:04:30.592566 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:30.592575 [info ]:  Succeeded [-------] model DW.dim_indicator (view)
+09:04:30.592602 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:30.592611 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:04:30.592633 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:30.592642 [info ]:  Succeeded [  0.00s] model DW.stg_indicators (view)
+09:04:30.592667 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:04:30.592677 [info ]:  Succeeded [  0.00s] model DW.dim_country (view)
+09:04:30.594511 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:30.594551 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:30.594560 [info ]:  Succeeded [  0.00s] model DW.fact_econ_observation (view)
+09:04:30.598001 [info ]: Started scheduling
+09:04:30.598055 [info ]: Finished scheduling [  0.00s]
+09:04:30.598121 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [40ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+09:04:30.598217 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:04:32.394179Z | 0881f749-8e85-4815-8d79-4aef15caa4eb ====================
+09:04:32.394384 [info ]: Started loading project
+09:04:32.395491 [info ]: Loading ~/.dbt/profiles.yml
+09:04:32.398351 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:32.405132 [info ]: Finished loading project [  0.01s]
+09:04:32.430969 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [36ms]
+09:04:32.431107 [info ]: Cached model count updated: 7 models (accurate)
+09:04:32.460091 [info ]: Started scheduling
+09:04:32.460191 [info ]: Finished scheduling [  0.00s]
+09:04:32.461628 [info ]: Started building task graph
+09:04:32.461667 [info ]: Finished building task graph [  0.00s]
+09:04:32.463911 [info ]: Started rendering (1 nodes)
+09:04:32.463937 [info ]: Started model DW.stg_observations
+09:04:32.463959 [debug]: Started rendering model DW.stg_observations
+09:04:32.464348 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:32.464434 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:32.464452 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:32.464467 [info ]: Started analyzing (1 nodes)
+09:04:32.464474 [debug]: Started analyzing model DW.stg_observations
+09:04:32.464693 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:32.464701 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:32.464710 [info ]: Started running (1 nodes)
+09:04:32.464713 [info ]: Started running model DW.stg_observations
+09:04:33.157844 [debug]: Query executed on node unknown:
+
+  
+  select
+    country_id,
+    indicator_id,
+    year,
+    value,
+    source_system,
+    vintage_date
+from RAW.RAW_OBSERVATIONS
+  
+  limit 1000
+
+09:04:33.254848 [info ]: Query show_model_gdp_analytics_stg_observations
+┌────────────┬──────────────┬──────┬──────────┬───────────────┬──────────────┐
+│ COUNTRY_ID ┆ INDICATOR_ID ┆ YEAR ┆ VALUE    ┆ SOURCE_SYSTEM ┆ VINTAGE_DATE │
+╞════════════╪══════════════╪══════╪══════════╪═══════════════╪══════════════╡
+│ CT004      ┆ IN002        ┆ 2019 ┆ 4837.84  ┆ IMF           ┆ 2026-01-18   │
+│ CT007      ┆ IN004        ┆ 2024 ┆ 49997.25 ┆ OECD          ┆ 2026-01-19   │
+│ CT007      ┆ IN003        ┆ 2022 ┆ 3.96     ┆ WorldBank     ┆ 2026-01-04   │
+│ CT009      ┆ IN003        ┆ 2016 ┆ 0.67     ┆ IMF           ┆ 2026-01-12   │
+│ CT006      ┆ IN004        ┆ 2019 ┆ 48960.61 ┆ WorldBank     ┆ 2026-01-15   │
+│ CT008      ┆ IN001        ┆ 2016 ┆ 1940.76  ┆ WorldBank     ┆ 2026-01-06   │
+│ CT001      ┆ IN004        ┆ 2022 ┆ 2098.98  ┆ OECD          ┆ 2026-01-04   │
+│ CT009      ┆ IN002        ┆ 2025 ┆ 2657.87  ┆ UN            ┆ 2026-01-16   │
+│ CT009      ┆ IN004        ┆ 2016 ┆ 52411.51 ┆ WorldBank     ┆ 2026-01-16   │
+│ CT009      ┆ IN003        ┆ 2024 ┆ 5.96     ┆ WorldBank     ┆ 2026-01-11   │
+│ CT009      ┆ IN001        ┆ 2025 ┆ 2832.89  ┆ UN            ┆ 2026-01-18   │
+│ CT004      ┆ IN004        ┆ 2025 ┆ 47125.53 ┆ WorldBank     ┆ 2026-01-11   │
+│ CT005      ┆ IN004        ┆ 2019 ┆ 55403.75 ┆ OECD          ┆ 2026-01-09   │
+│ CT003      ┆ IN004        ┆ 2018 ┆ 9996.94  ┆ UN            ┆ 2026-01-01   │
+│ CT007      ┆ IN001        ┆ 2024 ┆ 4031.08  ┆ OECD          ┆ 2026-01-19   │
+│ CT008      ┆ IN004        ┆ 2022 ┆ 9060.    ┆ OECD          ┆ 2026-01-05   │
+│ CT007      ┆ IN004        ┆ 2021 ┆ 46448.57 ┆ OECD          ┆ 2026-01-18   │
+│ CT007      ┆ IN003        ┆ 2023 ┆ 2.6      ┆ WorldBank     ┆ 2026-01-05   │
+│ CT004      ┆ IN004        ┆ 2020 ┆ 41270.31 ┆ OECD          ┆ 2026-01-02   │
+│ CT001      ┆ IN003        ┆ 2016 ┆ -2.16    ┆ UN            ┆ 2026-01-03   │
+│ CT009      ┆ IN002        ┆ 2021 ┆ 2553.25  ┆ OECD          ┆ 2026-01-03   │
+│ CT009      ┆ IN001        ┆ 2019 ┆ 2373.05  ┆ UN            ┆ 2026-01-06   │
+│ CT010      ┆ IN001        ┆ 2025 ┆ 2199.84  ┆ IMF           ┆ 2026-01-19   │
+│ CT003      ┆ IN002        ┆ 2024 ┆ 22766.5  ┆ UN            ┆ 2026-01-07   │
+│ CT001      ┆ IN004        ┆ 2023 ┆ 2032.61  ┆ WorldBank     ┆ 2026-01-04   │
+└────────────┴──────────────┴──────┴──────────┴───────────────┴──────────────┘
+25 rows.
+09:04:33.255115 [info ]: Finished running [  0.79s] model DW.stg_observations [success]
+09:04:33.255160 [info ]: Finished running [  0.79s] (1 nodes, 0 skipped, 0 errors)
+09:04:33.255181 [info ]:  Succeeded [  0.79s] model DW.stg_observations (view)
+==================== 2026-09-08T09:04:34.911040Z | 172e36b9-c11a-43a1-bda7-17e46c3e4654 ====================
+09:04:34.911217 [info ]: Started loading project
+09:04:34.912302 [info ]: Loading ~/.dbt/profiles.yml
+09:04:34.914211 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:34.924665 [info ]: Finished loading project [  0.01s]
+09:04:34.961030 [info ]: Cached model count updated: 7 models (estimate)
+09:04:34.961084 [info ]: Cached model count updated: 7 models (accurate)
+09:04:34.961155 [info ]: Started scheduling
+09:04:34.961300 [info ]: Finished scheduling [  0.00s]
+09:04:34.961328 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+09:04:34.963288 [info ]: Started building task graph
+09:04:34.963402 [info ]: Finished building task graph [  0.00s]
+09:04:34.969969 [info ]: Started rendering (8 nodes)
+09:04:34.970018 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+09:04:34.970028 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+09:04:34.970069 [info ]: Started model DW.fact_econ_observation
+09:04:34.970075 [debug]: Started rendering model DW.fact_econ_observation
+09:04:34.970086 [info ]: Started model DW.dim_indicator
+09:04:34.970091 [debug]: Started rendering model DW.dim_indicator
+09:04:34.970101 [info ]: Started model DW.stg_indicators
+09:04:34.970105 [debug]: Started rendering model DW.stg_indicators
+09:04:34.970119 [info ]: Started model DW.dim_date
+09:04:34.970125 [debug]: Started rendering model DW.dim_date
+09:04:34.970134 [info ]: Started model DW.stg_observations
+09:04:34.970148 [debug]: Started rendering model DW.stg_observations
+09:04:34.970165 [info ]: Started model DW.dim_country
+09:04:34.970178 [debug]: Started rendering model DW.dim_country
+09:04:34.970194 [info ]: Started model DW.stg_countries
+09:04:34.970202 [debug]: Started rendering model DW.stg_countries
+09:04:34.970921 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:34.970950 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:04:34.970955 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:34.970950 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+09:04:34.971057 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:34.971230 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:04:34.971277 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:34.971321 [info ]: Started analyzing (8 nodes)
+09:04:34.971347 [debug]: Started analyzing model DW.dim_country
+09:04:34.971393 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:34.971456 [debug]: Started analyzing model DW.stg_indicators
+09:04:34.971483 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:34.971499 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:34.971504 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:34.971534 [debug]: Started analyzing model DW.stg_observations
+09:04:34.971567 [debug]: Finished rendering [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:34.971599 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+09:04:34.971620 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:34.971634 [debug]: Started analyzing model DW.dim_date
+09:04:34.971654 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:34.971668 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:34.971698 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:34.971712 [debug]: Started analyzing model DW.dim_indicator
+09:04:34.971737 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:34.971748 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:34.971761 [debug]: Started analyzing model DW.stg_countries
+09:04:34.972107 [debug]: Finished analyzing [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:34.972158 [info ]:  Succeeded [  0.00s] snapshot SNAPSHOTS.country_snapshot (snapshot)
+09:04:34.972201 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:34.972217 [info ]:  Succeeded [  0.00s] model DW.stg_observations (view)
+09:04:34.972236 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:34.972250 [info ]:  Succeeded [  0.00s] model DW.dim_indicator (view)
+09:04:34.972268 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:34.972282 [info ]:  Succeeded [  0.00s] model DW.stg_indicators (view)
+09:04:34.972299 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:34.972312 [info ]:  Succeeded [  0.00s] model DW.dim_date (view)
+09:04:34.972328 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:34.972341 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:04:34.972354 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:04:34.972364 [info ]:  Succeeded [  0.00s] model DW.dim_country (view)
+09:04:34.974011 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:34.974058 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:34.974068 [info ]:  Succeeded [  0.00s] model DW.fact_econ_observation (view)
+09:04:34.977694 [info ]: Started scheduling
+09:04:34.977753 [info ]: Finished scheduling [  0.00s]
+09:04:34.977825 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [66ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+09:04:34.978357 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:04:47.216233Z | dd128f3b-565c-45a4-8590-467f97c18c4e ====================
+09:04:47.216385 [info ]: Started loading project
+09:04:47.216949 [info ]: Loading ~/.dbt/profiles.yml
+09:04:47.218167 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:47.221267 [info ]: Finished loading project [  0.00s]
+09:04:47.230415 [info ]: Started parsing
+09:04:47.268488 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:04:47.274777 [debug]: Finished parsing snapshots\country_snapshot.sql [  0.00s]
+09:04:47.277643 [debug]: Finished parsing models/marts/dim_country.sql [  0.00s]
+09:04:47.279092 [debug]: Finished parsing models/marts/dim_indicator.sql [  0.00s]
+09:04:47.279939 [debug]: Finished parsing models/marts/fact_econ_observation.sql [  0.00s]
+09:04:47.369443 [info ]: Finished parsing [  0.14s]
+09:04:47.371552 [info ]: Cached model count updated: 7 models (estimate)
+09:04:47.371570 [info ]: Cached model count updated: 7 models (accurate)
+09:04:47.371614 [info ]: Started scheduling
+09:04:47.371735 [info ]: Finished scheduling [  0.00s]
+09:04:47.371776 [debug]: Compilation - 7 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations"}
+09:04:47.372933 [info ]: Started building task graph
+09:04:47.373016 [info ]: Finished building task graph [  0.00s]
+09:04:47.375230 [info ]: Started rendering (7 nodes)
+09:04:47.375254 [info ]: Started model DW.fact_econ_observation
+09:04:47.375277 [debug]: Started rendering model DW.fact_econ_observation
+09:04:47.375300 [info ]: Started model DW.dim_indicator
+09:04:47.375305 [debug]: Started rendering model DW.dim_indicator
+09:04:47.375312 [info ]: Started model DW.stg_indicators
+09:04:47.375316 [debug]: Started rendering model DW.stg_indicators
+09:04:47.375322 [info ]: Started model DW.dim_date
+09:04:47.375326 [debug]: Started rendering model DW.dim_date
+09:04:47.375331 [info ]: Started model DW.stg_observations
+09:04:47.375335 [debug]: Started rendering model DW.stg_observations
+09:04:47.375341 [info ]: Started model DW.dim_country
+09:04:47.375344 [debug]: Started rendering model DW.dim_country
+09:04:47.375351 [info ]: Started model DW.stg_countries
+09:04:47.375355 [debug]: Started rendering model DW.stg_countries
+09:04:47.376421 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:47.376548 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:47.376576 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:47.376622 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:47.376640 [info ]: Started analyzing (7 nodes)
+09:04:47.376655 [debug]: Started analyzing model DW.stg_indicators
+09:04:47.376687 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:47.376709 [debug]: Started analyzing model DW.dim_date
+09:04:47.376744 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:47.376757 [debug]: Started analyzing model DW.stg_countries
+09:04:47.376898 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:47.377045 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:47.377084 [debug]: Started analyzing model DW.stg_observations
+09:04:47.377194 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:47.377221 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:04:47.377263 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:47.377274 [info ]:  Succeeded [  0.00s] model DW.stg_indicators (view)
+09:04:47.377289 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:47.377303 [info ]:  Succeeded [  0.00s] model DW.dim_date (view)
+09:04:47.377318 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:47.377331 [info ]:  Succeeded [  0.00s] model DW.stg_observations (view)
+09:04:47.377989 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:47.378233 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:47.378306 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:47.379096 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:47.379217 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:04:47.379756 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:04:47.379867 [debug]: Started analyzing model DW.dim_country
+09:04:47.379926 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:47.379950 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+09:04:47.379973 [debug]: Started analyzing model DW.dim_indicator
+09:04:47.381169 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:47.381234 [info ]:  Succeeded [  0.01s] model DW.dim_indicator (view)
+09:04:47.381310 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:04:47.381326 [info ]:  Succeeded [  0.01s] model DW.dim_country (view)
+09:04:47.382353 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:47.382372 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+09:04:47.382379 [info ]:  Succeeded [  0.01s] model DW.fact_econ_observation (view)
+09:04:47.385708 [info ]: Started scheduling
+09:04:47.385773 [info ]: Finished scheduling [  0.00s]
+09:04:47.387027 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [170ms]
+Processed: 7 models
+Summary: 7 total | 7 success
+09:04:47.387130 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:04:48.922870Z | d001850b-7d46-4b68-a58b-7e867cf8b26b ====================
+09:04:48.923105 [info ]: Started loading project
+09:04:48.924308 [info ]: Loading ~/.dbt/profiles.yml
+09:04:48.927359 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:48.935587 [info ]: Finished loading project [  0.01s]
+09:04:48.955356 [info ]: Cached model count updated: 7 models (estimate)
+09:04:48.955382 [info ]: Cached model count updated: 7 models (accurate)
+09:04:48.955412 [info ]: Started scheduling
+09:04:48.955488 [info ]: Finished scheduling [  0.00s]
+09:04:48.955507 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+09:04:48.956792 [info ]: Started building task graph
+09:04:48.956868 [info ]: Finished building task graph [  0.00s]
+09:04:48.959118 [info ]: Started rendering (8 nodes)
+09:04:48.959142 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+09:04:48.959152 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+09:04:48.959173 [info ]: Started model DW.fact_econ_observation
+09:04:48.959181 [debug]: Started rendering model DW.fact_econ_observation
+09:04:48.959189 [info ]: Started model DW.dim_indicator
+09:04:48.959193 [debug]: Started rendering model DW.dim_indicator
+09:04:48.959199 [info ]: Started model DW.stg_indicators
+09:04:48.959203 [debug]: Started rendering model DW.stg_indicators
+09:04:48.959209 [info ]: Started model DW.dim_date
+09:04:48.959213 [debug]: Started rendering model DW.dim_date
+09:04:48.959219 [info ]: Started model DW.stg_observations
+09:04:48.959224 [debug]: Started rendering model DW.stg_observations
+09:04:48.959230 [info ]: Started model DW.dim_country
+09:04:48.959234 [debug]: Started rendering model DW.dim_country
+09:04:48.959241 [info ]: Started model DW.stg_countries
+09:04:48.959244 [debug]: Started rendering model DW.stg_countries
+09:04:48.959837 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:48.959925 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:48.959936 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+09:04:48.959969 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:48.960023 [info ]: Started analyzing (8 nodes)
+09:04:48.960041 [debug]: Started analyzing model DW.dim_indicator
+09:04:48.960048 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:48.960069 [debug]: Finished rendering [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:48.960083 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:48.960095 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+09:04:48.960090 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:04:48.960115 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:48.960117 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:48.960128 [debug]: Started analyzing model DW.stg_indicators
+09:04:48.960192 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:48.960204 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:48.960237 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:48.960264 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:48.960292 [debug]: Started analyzing model DW.stg_observations
+09:04:48.960326 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:04:48.960340 [debug]: Started analyzing model DW.dim_country
+09:04:48.960356 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:48.960369 [debug]: Started analyzing model DW.dim_date
+09:04:48.960392 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:48.960403 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:48.960417 [debug]: Started analyzing model DW.stg_countries
+09:04:48.960563 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:48.960596 [info ]:  Succeeded [-------] model DW.stg_indicators (view)
+09:04:48.960630 [debug]: Finished analyzing [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:48.960644 [info ]:  Succeeded [-------] snapshot SNAPSHOTS.country_snapshot (snapshot)
+09:04:48.960663 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:48.960670 [info ]:  Succeeded [-------] model DW.dim_indicator (view)
+09:04:48.960683 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:48.960691 [info ]:  Succeeded [  0.00s] model DW.stg_observations (view)
+09:04:48.960709 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:48.960714 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:04:48.960725 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:48.960730 [info ]:  Succeeded [  0.00s] model DW.dim_date (view)
+09:04:48.960781 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:04:48.960795 [info ]:  Succeeded [  0.00s] model DW.dim_country (view)
+09:04:48.962803 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:48.962830 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:48.962838 [info ]:  Succeeded [  0.00s] model DW.fact_econ_observation (view)
+09:04:48.966163 [info ]: Started scheduling
+09:04:48.966233 [info ]: Finished scheduling [  0.00s]
+09:04:48.966316 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [43ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+09:04:48.966413 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-08T09:04:55.800812Z | 497678b5-fbe3-48c8-acc1-821e6017d034 ====================
+09:04:55.801095 [info ]: Started loading project
+09:04:55.802277 [info ]: Loading ~/.dbt/profiles.yml
+09:04:55.803892 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:55.807747 [info ]: Finished loading project [  0.01s]
+09:04:55.827475 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [26ms]
+09:04:55.827558 [info ]: Cached model count updated: 7 models (accurate)
+09:04:55.857691 [info ]: Started scheduling
+09:04:55.857780 [info ]: Finished scheduling [  0.00s]
+09:04:55.859246 [info ]: Started building task graph
+09:04:55.859293 [info ]: Finished building task graph [  0.00s]
+09:04:55.861522 [info ]: Started rendering (1 nodes)
+09:04:55.861548 [info ]: Started model DW.stg_observations
+09:04:55.861557 [debug]: Started rendering model DW.stg_observations
+09:04:55.861889 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:55.862023 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:55.862051 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:55.862075 [info ]: Started analyzing (1 nodes)
+09:04:55.862088 [debug]: Started analyzing model DW.stg_observations
+09:04:55.862302 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:55.862318 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:55.862330 [info ]: Started running (1 nodes)
+09:04:55.862340 [info ]: Started running model DW.stg_observations
+09:04:57.055630 [debug]: Query executed on node unknown:
+
+  
+  select
+    country_id,
+    indicator_id,
+    year,
+    value,
+    source_system,
+    vintage_date
+from RAW.RAW_OBSERVATIONS
+  
+  limit 1000
+
+09:04:57.311505 [info ]: Query show_model_gdp_analytics_stg_observations
+┌────────────┬──────────────┬──────┬──────────┬───────────────┬──────────────┐
+│ COUNTRY_ID ┆ INDICATOR_ID ┆ YEAR ┆ VALUE    ┆ SOURCE_SYSTEM ┆ VINTAGE_DATE │
+╞════════════╪══════════════╪══════╪══════════╪═══════════════╪══════════════╡
+│ CT004      ┆ IN002        ┆ 2019 ┆ 4837.84  ┆ IMF           ┆ 2026-01-18   │
+│ CT007      ┆ IN004        ┆ 2024 ┆ 49997.25 ┆ OECD          ┆ 2026-01-19   │
+│ CT007      ┆ IN003        ┆ 2022 ┆ 3.96     ┆ WorldBank     ┆ 2026-01-04   │
+│ CT009      ┆ IN003        ┆ 2016 ┆ 0.67     ┆ IMF           ┆ 2026-01-12   │
+│ CT006      ┆ IN004        ┆ 2019 ┆ 48960.61 ┆ WorldBank     ┆ 2026-01-15   │
+│ CT008      ┆ IN001        ┆ 2016 ┆ 1940.76  ┆ WorldBank     ┆ 2026-01-06   │
+│ CT001      ┆ IN004        ┆ 2022 ┆ 2098.98  ┆ OECD          ┆ 2026-01-04   │
+│ CT009      ┆ IN002        ┆ 2025 ┆ 2657.87  ┆ UN            ┆ 2026-01-16   │
+│ CT009      ┆ IN004        ┆ 2016 ┆ 52411.51 ┆ WorldBank     ┆ 2026-01-16   │
+│ CT009      ┆ IN003        ┆ 2024 ┆ 5.96     ┆ WorldBank     ┆ 2026-01-11   │
+│ CT009      ┆ IN001        ┆ 2025 ┆ 2832.89  ┆ UN            ┆ 2026-01-18   │
+│ CT004      ┆ IN004        ┆ 2025 ┆ 47125.53 ┆ WorldBank     ┆ 2026-01-11   │
+│ CT005      ┆ IN004        ┆ 2019 ┆ 55403.75 ┆ OECD          ┆ 2026-01-09   │
+│ CT003      ┆ IN004        ┆ 2018 ┆ 9996.94  ┆ UN            ┆ 2026-01-01   │
+│ CT007      ┆ IN001        ┆ 2024 ┆ 4031.08  ┆ OECD          ┆ 2026-01-19   │
+│ CT008      ┆ IN004        ┆ 2022 ┆ 9060.    ┆ OECD          ┆ 2026-01-05   │
+│ CT007      ┆ IN004        ┆ 2021 ┆ 46448.57 ┆ OECD          ┆ 2026-01-18   │
+│ CT007      ┆ IN003        ┆ 2023 ┆ 2.6      ┆ WorldBank     ┆ 2026-01-05   │
+│ CT004      ┆ IN004        ┆ 2020 ┆ 41270.31 ┆ OECD          ┆ 2026-01-02   │
+│ CT001      ┆ IN003        ┆ 2016 ┆ -2.16    ┆ UN            ┆ 2026-01-03   │
+│ CT009      ┆ IN002        ┆ 2021 ┆ 2553.25  ┆ OECD          ┆ 2026-01-03   │
+│ CT009      ┆ IN001        ┆ 2019 ┆ 2373.05  ┆ UN            ┆ 2026-01-06   │
+│ CT010      ┆ IN001        ┆ 2025 ┆ 2199.84  ┆ IMF           ┆ 2026-01-19   │
+│ CT003      ┆ IN002        ┆ 2024 ┆ 22766.5  ┆ UN            ┆ 2026-01-07   │
+│ CT001      ┆ IN004        ┆ 2023 ┆ 2032.61  ┆ WorldBank     ┆ 2026-01-04   │
+└────────────┴──────────────┴──────┴──────────┴───────────────┴──────────────┘
+25 rows.
+09:04:57.311734 [info ]: Finished running [  1.45s] model DW.stg_observations [success]
+09:04:57.311780 [info ]: Finished running [  1.45s] (1 nodes, 0 skipped, 0 errors)
+09:04:57.311801 [info ]:  Succeeded [  1.45s] model DW.stg_observations (view)
+==================== 2026-09-08T09:04:58.947528Z | 45f2eae4-a6de-4e44-b328-e0f7fc953863 ====================
+09:04:58.947708 [info ]: Started loading project
+09:04:58.948876 [info ]: Loading ~/.dbt/profiles.yml
+09:04:58.950896 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+09:04:58.956308 [info ]: Finished loading project [  0.01s]
+09:04:58.981291 [info ]: Cached model count updated: 7 models (estimate)
+09:04:58.981316 [info ]: Cached model count updated: 7 models (accurate)
+09:04:58.981360 [info ]: Started scheduling
+09:04:58.981448 [info ]: Finished scheduling [  0.00s]
+09:04:58.981464 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+09:04:58.983607 [info ]: Started building task graph
+09:04:58.983755 [info ]: Finished building task graph [  0.00s]
+09:04:58.986100 [info ]: Started rendering (8 nodes)
+09:04:58.986126 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+09:04:58.986147 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+09:04:58.986172 [info ]: Started model DW.fact_econ_observation
+09:04:58.986177 [debug]: Started rendering model DW.fact_econ_observation
+09:04:58.986184 [info ]: Started model DW.dim_indicator
+09:04:58.986188 [debug]: Started rendering model DW.dim_indicator
+09:04:58.986195 [info ]: Started model DW.stg_indicators
+09:04:58.986199 [debug]: Started rendering model DW.stg_indicators
+09:04:58.986206 [info ]: Started model DW.dim_date
+09:04:58.986210 [debug]: Started rendering model DW.dim_date
+09:04:58.986216 [info ]: Started model DW.stg_observations
+09:04:58.986220 [debug]: Started rendering model DW.stg_observations
+09:04:58.986226 [info ]: Started model DW.dim_country
+09:04:58.986231 [debug]: Started rendering model DW.dim_country
+09:04:58.986238 [info ]: Started model DW.stg_countries
+09:04:58.986242 [debug]: Started rendering model DW.stg_countries
+09:04:58.986759 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+09:04:58.986909 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+09:04:58.986957 [debug]: Finished rendering [  0.00s] model DW.stg_indicators [success]
+09:04:58.987013 [info ]: Started analyzing (8 nodes)
+09:04:58.987036 [debug]: Started analyzing model DW.stg_indicators
+09:04:58.987076 [debug]: Finished rendering [  0.00s] model DW.fact_econ_observation [success]
+09:04:58.987103 [debug]: Started analyzing model DW.fact_econ_observation
+09:04:58.987176 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+09:04:58.987192 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+09:04:58.987256 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+09:04:58.987277 [debug]: Finished rendering [  0.00s] model DW.dim_country [success]
+09:04:58.987328 [debug]: Started analyzing model DW.dim_country
+09:04:58.987457 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+09:04:58.987472 [debug]: Finished rendering [  0.00s] model DW.dim_date [success]
+09:04:58.987504 [debug]: Started analyzing model DW.dim_date
+09:04:58.987569 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+09:04:58.987594 [debug]: Finished analyzing [  0.00s] model DW.stg_indicators [success]
+09:04:58.987623 [info ]:  Succeeded [-------] model DW.stg_indicators (view)
+09:04:58.987666 [debug]: Finished rendering [  0.00s] model DW.stg_countries [success]
+09:04:58.987663 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+09:04:58.987704 [debug]: Started analyzing model DW.stg_countries
+09:04:58.987735 [debug]: Finished rendering [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:58.987770 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+09:04:58.987799 [debug]: Finished rendering [  0.00s] model DW.stg_observations [success]
+09:04:58.987816 [debug]: Started analyzing model DW.stg_observations
+09:04:58.987844 [debug]: Finished rendering [  0.00s] model DW.dim_indicator [success]
+09:04:58.987860 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:58.987874 [debug]: Started analyzing model DW.dim_indicator
+09:04:58.987898 [debug]: Finished analyzing [  0.00s] model DW.dim_date [success]
+09:04:58.987919 [info ]:  Succeeded [  0.00s] model DW.dim_date (view)
+09:04:58.987952 [debug]: Finished analyzing [  0.00s] model DW.dim_country [success]
+09:04:58.987967 [info ]:  Succeeded [  0.00s] model DW.dim_country (view)
+09:04:58.988001 [debug]: Finished analyzing [  0.00s] model DW.stg_countries [success]
+09:04:58.988033 [info ]:  Succeeded [  0.00s] model DW.stg_countries (view)
+09:04:58.988101 [debug]: Finished analyzing [  0.00s] snapshot SNAPSHOTS.country_snapshot [success]
+09:04:58.988142 [info ]:  Succeeded [  0.00s] snapshot SNAPSHOTS.country_snapshot (snapshot)
+09:04:58.988177 [debug]: Finished analyzing [  0.00s] model DW.stg_observations [success]
+09:04:58.988190 [info ]:  Succeeded [  0.00s] model DW.stg_observations (view)
+09:04:58.988216 [debug]: Finished analyzing [  0.00s] model DW.dim_indicator [success]
+09:04:58.988229 [info ]:  Succeeded [  0.00s] model DW.dim_indicator (view)
+09:04:58.989863 [debug]: Finished analyzing [  0.00s] model DW.fact_econ_observation [success]
+09:04:58.989897 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:04:58.989911 [info ]:  Succeeded [  0.00s] model DW.fact_econ_observation (view)
+09:04:58.995689 [info ]: Started scheduling
+09:04:58.995787 [info ]: Finished scheduling [  0.00s]
+09:04:58.995924 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [48ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+09:04:58.996199 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-15T15:35:26.038997Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-09-15T15:35:26.050723Z | 97f960ce-a943-41cb-8345-b3cc560bf11f ====================
+15:35:26.051774 [info ]: Starting dbt LSP server
+15:35:26.053567 [info ]: Connecting to LSP client on port 8000
+15:35:26.060250 [info ]: Successfully connected to LSP client
+15:35:26.060819 [info ]: Creating LSP service...
+15:35:26.073211 [info ]: Creating LSP server...
+15:35:26.073267 [info ]: Starting LSP server...
+15:35:26.750840 [info ]: Loading ~/.dbt/profiles.yml
+15:35:26.816445 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+==================== 2026-09-15T15:35:26.936509Z | e4cc07df-8b7f-455c-b42b-a59cdaf9d28a ====================
+15:35:26.938653 [info ]: Started loading project
+15:35:26.949769 [info ]: Loading ~/.dbt/profiles.yml
+15:35:26.988278 [debug]:    Started loading packages
+15:35:26.992162 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+15:35:27.010125 [debug]:     Loaded [  0.02s] packages
+15:35:27.024617 [info ]: Finished loading project [  0.09s]
+15:35:27.044439 [info ]: Started parsing
+15:35:27.250676 [debug]: Finished parsing models/schema.yml [  0.03s]
+15:35:27.325836 [debug]: Finished parsing snapshots\country_snapshot.sql [  0.06s]
+15:35:27.399749 [debug]: Finished parsing models/marts/dim_country.sql [  0.06s]
+15:35:27.418213 [debug]: Finished parsing models/marts/dim_date.sql [  0.02s]
+15:35:27.446685 [debug]: Finished parsing models/marts/dim_indicator.sql [  0.03s]
+15:35:27.466856 [debug]: Finished parsing models/marts/fact_econ_observation.sql [  0.02s]
+15:35:27.501178 [debug]: Finished parsing models/staging/stg_countries.sql [  0.03s]
+15:35:27.519454 [debug]: Finished parsing models/staging/stg_indicators.sql [  0.02s]
+15:35:27.543644 [debug]: Finished parsing models/staging/stg_observations.sql [  0.02s]
+15:35:28.263360 [info ]: Finished parsing [  1.22s]
+15:35:28.270071 [info ]: Cached model count updated: 7 models (estimate)
+15:35:28.270132 [info ]: Cached model count updated: 7 models (accurate)
+15:35:28.290637 [info ]: Started scheduling
+15:35:28.295809 [info ]: Finished scheduling [  0.01s]
+15:35:28.297259 [debug]: Compilation - 0 nodes selected: {}
+15:35:28.300818 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+15:35:28.301109 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+15:35:28.301659 [info ]: Started scheduling
+15:35:28.303475 [info ]: Finished scheduling [  0.00s]
+15:35:28.334551 [info ]: Started building task graph
+15:35:28.336743 [info ]: Finished building task graph [  0.00s]
+15:35:28.464259 [info ]: Started scheduling
+15:35:28.464463 [info ]: Finished scheduling [  0.00s]
+15:35:28.468108 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [1.5s]
+15:35:28.472158 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-09-15T15:35:31.631777Z | 14886b17-e673-4854-8dbf-d3a39c671ab8 ====================
+15:35:31.632413 [info ]: Started loading project
+15:35:31.634586 [info ]: Loading ~/.dbt/profiles.yml
+15:35:31.638688 [warn ]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key 'gdp_analytics'. YAML path: 'models.gdp_analytics'.
+  --> dbt_project.yml:33:17
+15:35:31.654849 [info ]: Finished loading project [  0.02s]
+15:35:31.726071 [info ]: Cached model count updated: 7 models (estimate)
+15:35:31.726156 [info ]: Cached model count updated: 7 models (accurate)
+15:35:31.726263 [info ]: Started scheduling
+15:35:31.726521 [info ]: Finished scheduling [  0.00s]
+15:35:31.726596 [debug]: Compilation - 8 nodes selected: {"model.gdp_analytics.dim_country", "model.gdp_analytics.dim_date", "model.gdp_analytics.dim_indicator", "model.gdp_analytics.fact_econ_observation", "model.gdp_analytics.stg_countries", "model.gdp_analytics.stg_indicators", "model.gdp_analytics.stg_observations", "snapshot.gdp_analytics.country_snapshot"}
+15:35:31.739876 [info ]: Started building task graph
+15:35:31.745178 [info ]: Finished building task graph [  0.01s]
+15:35:31.765276 [info ]: Started rendering (8 nodes)
+15:35:31.767618 [info ]: Started snapshot SNAPSHOTS.country_snapshot
+15:35:31.768403 [debug]: Started rendering snapshot SNAPSHOTS.country_snapshot
+15:35:31.770476 [info ]: Started model DW.fact_econ_observation
+15:35:31.770556 [debug]: Started rendering model DW.fact_econ_observation
+15:35:31.770610 [info ]: Started model DW.dim_indicator
+15:35:31.770650 [debug]: Started rendering model DW.dim_indicator
+15:35:31.770688 [info ]: Started model DW.stg_indicators
+15:35:31.770714 [debug]: Started rendering model DW.stg_indicators
+15:35:31.770743 [info ]: Started model DW.dim_date
+15:35:31.770759 [debug]: Started rendering model DW.dim_date
+15:35:31.770784 [info ]: Started model DW.stg_observations
+15:35:31.770805 [debug]: Started rendering model DW.stg_observations
+15:35:31.770829 [info ]: Started model DW.dim_country
+15:35:31.770880 [debug]: Started rendering model DW.dim_country
+15:35:31.771124 [info ]: Started model DW.stg_countries
+15:35:31.771184 [debug]: Started rendering model DW.stg_countries
+15:35:31.792788 [debug]: Compiled SQL for node model.gdp_analytics.fact_econ_observation at target\.lsp\compiled\gdp_analytics\models\marts\fact_econ_observation.sql
+15:35:31.792801 [debug]: Compiled SQL for node model.gdp_analytics.dim_date at target\.lsp\compiled\gdp_analytics\models\marts\dim_date.sql
+15:35:31.793998 [debug]: Compiled SQL for node model.gdp_analytics.dim_country at target\.lsp\compiled\gdp_analytics\models\marts\dim_country.sql
+15:35:31.794825 [debug]: Compiled SQL for node model.gdp_analytics.stg_indicators at target\.lsp\compiled\gdp_analytics\models\staging\stg_indicators.sql
+15:35:31.794917 [debug]: Compiled SQL for node model.gdp_analytics.dim_indicator at target\.lsp\compiled\gdp_analytics\models\marts\dim_indicator.sql
+15:35:31.795969 [debug]: Compiled SQL for node model.gdp_analytics.stg_observations at target\.lsp\compiled\gdp_analytics\models\staging\stg_observations.sql
+15:35:31.797263 [debug]: Finished rendering [  0.03s] model DW.dim_date [success]
+15:35:31.797901 [debug]: Compiled SQL for node model.gdp_analytics.stg_countries at target\.lsp\compiled\gdp_analytics\models\staging\stg_countries.sql
+15:35:31.799169 [debug]: Compiled SQL for node snapshot.gdp_analytics.country_snapshot at target\.lsp\compiled\gdp_analytics\snapshots\country_snapshot.sql\country_snapshot.sql
+15:35:31.799377 [info ]: Started analyzing (8 nodes)
+15:35:31.799438 [debug]: Started analyzing model DW.dim_date
+15:35:31.799931 [debug]: Finished rendering [  0.03s] model DW.dim_country [success]
+15:35:31.800007 [debug]: Started analyzing model DW.dim_country
+15:35:31.800067 [debug]: Finished rendering [  0.03s] model DW.fact_econ_observation [success]
+15:35:31.800109 [debug]: Started analyzing model DW.fact_econ_observation
+15:35:31.800141 [debug]: Finished rendering [  0.03s] model DW.stg_indicators [success]
+15:35:31.800177 [debug]: Started analyzing model DW.stg_indicators
+15:35:31.800206 [debug]: Finished rendering [  0.03s] model DW.dim_indicator [success]
+15:35:31.800302 [debug]: Started analyzing model DW.dim_indicator
+15:35:31.800353 [debug]: Finished rendering [  0.03s] model DW.stg_observations [success]
+15:35:31.800393 [debug]: Started analyzing model DW.stg_observations
+15:35:31.865989 [debug]: Finished rendering [  0.09s] model DW.stg_countries [success]
+15:35:31.866105 [debug]: Started analyzing model DW.stg_countries
+15:35:31.866203 [debug]: Finished rendering [  0.10s] snapshot SNAPSHOTS.country_snapshot [success]
+15:35:31.866242 [info ]: Finished rendering [  0.10s] (8 nodes, 0 skipped, 0 errors)
+15:35:31.866385 [debug]: Started analyzing snapshot SNAPSHOTS.country_snapshot
+15:35:31.875363 [debug]: Finished analyzing [  0.01s] snapshot SNAPSHOTS.country_snapshot [success]
+15:35:31.875468 [info ]:  Succeeded [  0.10s] snapshot SNAPSHOTS.country_snapshot (snapshot)
+15:35:31.875866 [debug]: Finished analyzing [  0.01s] model DW.stg_countries [success]
+15:35:31.875911 [info ]:  Succeeded [  0.10s] model DW.stg_countries (view)
+15:35:31.875963 [debug]: Finished analyzing [  0.08s] model DW.stg_observations [success]
+15:35:31.875994 [info ]:  Succeeded [  0.10s] model DW.stg_observations (view)
+15:35:31.876035 [debug]: Finished analyzing [  0.08s] model DW.dim_country [success]
+15:35:31.876066 [info ]:  Succeeded [  0.10s] model DW.dim_country (view)
+15:35:31.876097 [debug]: Finished analyzing [  0.08s] model DW.dim_date [success]
+15:35:31.876125 [info ]:  Succeeded [  0.10s] model DW.dim_date (view)
+15:35:31.878478 [debug]: Finished analyzing [  0.08s] model DW.dim_indicator [success]
+15:35:31.879259 [info ]:  Succeeded [  0.11s] model DW.dim_indicator (view)
+15:35:31.879626 [debug]: Finished analyzing [  0.08s] model DW.stg_indicators [success]
+15:35:31.879696 [info ]:  Succeeded [  0.11s] model DW.stg_indicators (view)
+15:35:31.883621 [debug]: Finished analyzing [  0.08s] model DW.fact_econ_observation [success]
+15:35:31.883700 [info ]: Finished analyzing [  0.08s] (8 nodes, 0 skipped, 0 errors)
+15:35:31.883729 [info ]:  Succeeded [  0.11s] model DW.fact_econ_observation (view)
+15:35:31.896854 [info ]: Started scheduling
+15:35:31.897030 [info ]: Finished scheduling [  0.00s]
+15:35:31.898431 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [266ms]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+15:35:31.899146 [info ]: Cached model count updated: 7 models (accurate)
