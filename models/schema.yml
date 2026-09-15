@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_country
+    columns:
+      - name: country_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_indicator
+    columns:
+      - name: indicator_id
+        tests:
+          - not_null
+
+  - name: fact_econ_observation
+    columns:
+      - name: sk_country
+        tests:
+          - not_null
+
+      - name: sk_indicator
+        tests:
+          - not_null
+          
